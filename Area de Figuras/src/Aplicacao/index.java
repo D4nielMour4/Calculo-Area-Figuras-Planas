@@ -1,5 +1,13 @@
 package Aplicacao;
 
+import figuras.Losango;
+import figuras.Paralelogramo;
+import figuras.Quadrado;
+import figuras.Retangulo;
+import figuras.Trapezio;
+import figuras.Triangulo;
+import usuarios.Professor;
+import usuarios.Aluno;
 import javax.swing.JOptionPane;
 
 /**
@@ -16,6 +24,7 @@ public class index extends javax.swing.JFrame {
         Campos();
     }
      public void Campos (){
+        
         base.setVisible(false);
         altura.setVisible(false);
         calcular.setVisible(false);
@@ -27,7 +36,21 @@ public class index extends javax.swing.JFrame {
         nomeDiagonalMaior.setVisible(false);
         diagonalMenor.setVisible(false);
         nomeDiagonalMenor.setVisible(false);
+        
+        nomeEscolhaFigura.setVisible(false);
+        figura.setVisible(false);
+        OK.setVisible(false);
+        
+        nomeNome.setVisible(true);
+        Nome.setVisible(true);
+        nomeFuncao.setVisible(true);
+        Funcao.setVisible(true);
+        GerenciadorAcesso.setVisible(true);
+        
+        Login.setVisible(true);
+        Figuras.setVisible(false);
     }
+    
 
 
     /**
@@ -39,7 +62,7 @@ public class index extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        Figuras = new javax.swing.JPanel();
         nomeBaseMenor = new javax.swing.JLabel();
         diagonalMenor = new javax.swing.JTextField();
         altura = new javax.swing.JTextField();
@@ -51,36 +74,43 @@ public class index extends javax.swing.JFrame {
         nomeDiagonalMaior = new javax.swing.JLabel();
         baseMenor = new javax.swing.JTextField();
         diagonalMaior = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
+        nomeEscolhaFigura = new javax.swing.JLabel();
         figura = new javax.swing.JComboBox<>();
         OK = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        Login = new javax.swing.JPanel();
+        GerenciadorAcesso = new javax.swing.JLayeredPane();
+        Nome = new javax.swing.JTextField();
+        nomeNome = new javax.swing.JLabel();
+        LoginBT = new javax.swing.JButton();
+        Funcao = new javax.swing.JComboBox<>();
+        nomeFuncao = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        Figuras.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Figuras.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         nomeBaseMenor.setText("Base Menor");
-        jPanel1.add(nomeBaseMenor, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 30, -1, -1));
+        Figuras.add(nomeBaseMenor, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 30, -1, -1));
 
         diagonalMenor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 diagonalMenorActionPerformed(evt);
             }
         });
-        jPanel1.add(diagonalMenor, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 140, 71, -1));
+        Figuras.add(diagonalMenor, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 140, 71, -1));
 
         altura.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 alturaActionPerformed(evt);
             }
         });
-        jPanel1.add(altura, new org.netbeans.lib.awtextra.AbsoluteConstraints(79, 59, 71, -1));
+        Figuras.add(altura, new org.netbeans.lib.awtextra.AbsoluteConstraints(79, 59, 71, -1));
 
         nomeAltura.setText("Altura");
-        jPanel1.add(nomeAltura, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 62, 37, -1));
+        Figuras.add(nomeAltura, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 62, 37, -1));
 
         calcular.setText("Calcular !");
         calcular.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -93,39 +123,39 @@ public class index extends javax.swing.JFrame {
                 calcularActionPerformed(evt);
             }
         });
-        jPanel1.add(calcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(366, 160, -1, -1));
+        Figuras.add(calcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(366, 160, -1, -1));
 
         nomeDiagonalMenor.setText("Diagonal Menor");
-        jPanel1.add(nomeDiagonalMenor, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 90, -1));
+        Figuras.add(nomeDiagonalMenor, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 90, -1));
 
         base.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 baseActionPerformed(evt);
             }
         });
-        jPanel1.add(base, new org.netbeans.lib.awtextra.AbsoluteConstraints(79, 31, 71, -1));
+        Figuras.add(base, new org.netbeans.lib.awtextra.AbsoluteConstraints(79, 31, 71, -1));
 
         nomeBase.setText("Base");
-        jPanel1.add(nomeBase, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 34, 37, -1));
+        Figuras.add(nomeBase, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 34, 37, -1));
 
         nomeDiagonalMaior.setText("Diagonal Maior");
-        jPanel1.add(nomeDiagonalMaior, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 90, -1));
+        Figuras.add(nomeDiagonalMaior, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 90, -1));
 
         baseMenor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 baseMenorActionPerformed(evt);
             }
         });
-        jPanel1.add(baseMenor, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, 71, -1));
+        Figuras.add(baseMenor, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, 71, -1));
 
         diagonalMaior.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 diagonalMaiorActionPerformed(evt);
             }
         });
-        jPanel1.add(diagonalMaior, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 71, -1));
+        Figuras.add(diagonalMaior, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 71, -1));
 
-        jLabel2.setText("Escolha a Figura");
+        nomeEscolhaFigura.setText("Escolha a Figura");
 
         figura.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione", "Quadrado", "Triangulo", "Retangulo", "Paralelogramo", "Trapezio", "Losango" }));
 
@@ -164,6 +194,94 @@ public class index extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        Nome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NomeActionPerformed(evt);
+            }
+        });
+
+        nomeNome.setText("Nome");
+
+        LoginBT.setText("Login");
+        LoginBT.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LoginBTMouseClicked(evt);
+            }
+        });
+        LoginBT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LoginBTActionPerformed(evt);
+            }
+        });
+
+        Funcao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Aluno", "Professor" }));
+
+        nomeFuncao.setText("Função");
+
+        GerenciadorAcesso.setLayer(Nome, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        GerenciadorAcesso.setLayer(nomeNome, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        GerenciadorAcesso.setLayer(LoginBT, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        GerenciadorAcesso.setLayer(Funcao, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        GerenciadorAcesso.setLayer(nomeFuncao, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        javax.swing.GroupLayout GerenciadorAcessoLayout = new javax.swing.GroupLayout(GerenciadorAcesso);
+        GerenciadorAcesso.setLayout(GerenciadorAcessoLayout);
+        GerenciadorAcessoLayout.setHorizontalGroup(
+            GerenciadorAcessoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(GerenciadorAcessoLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addGroup(GerenciadorAcessoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(GerenciadorAcessoLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(LoginBT)
+                        .addGap(22, 22, 22))
+                    .addGroup(GerenciadorAcessoLayout.createSequentialGroup()
+                        .addGroup(GerenciadorAcessoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(nomeNome, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(nomeFuncao))
+                        .addGap(8, 8, 8)
+                        .addGroup(GerenciadorAcessoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Funcao, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Nome, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(100, Short.MAX_VALUE))))
+        );
+        GerenciadorAcessoLayout.setVerticalGroup(
+            GerenciadorAcessoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(GerenciadorAcessoLayout.createSequentialGroup()
+                .addGap(58, 58, 58)
+                .addGroup(GerenciadorAcessoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Nome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nomeNome))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(GerenciadorAcessoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Funcao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nomeFuncao))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addComponent(LoginBT)
+                .addGap(33, 33, 33))
+        );
+
+        javax.swing.GroupLayout LoginLayout = new javax.swing.GroupLayout(Login);
+        Login.setLayout(LoginLayout);
+        LoginLayout.setHorizontalGroup(
+            LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 522, Short.MAX_VALUE)
+            .addGroup(LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(LoginLayout.createSequentialGroup()
+                    .addGap(0, 96, Short.MAX_VALUE)
+                    .addComponent(GerenciadorAcesso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 96, Short.MAX_VALUE)))
+        );
+        LoginLayout.setVerticalGroup(
+            LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 302, Short.MAX_VALUE)
+            .addGroup(LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(LoginLayout.createSequentialGroup()
+                    .addGap(0, 41, Short.MAX_VALUE)
+                    .addComponent(GerenciadorAcesso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 41, Short.MAX_VALUE)))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -171,18 +289,23 @@ public class index extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2)
+                .addComponent(nomeEscolhaFigura)
                 .addGap(32, 32, 32)
                 .addComponent(figura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(OK)
                 .addGap(100, 100, 100))
             .addGroup(layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addGap(55, 55, 55)
+                .addComponent(Figuras, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(113, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -191,12 +314,17 @@ public class index extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
+                    .addComponent(nomeEscolhaFigura)
                     .addComponent(figura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(OK))
-                .addGap(18, 18, 18)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addComponent(Figuras, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap(54, Short.MAX_VALUE)
+                    .addComponent(Login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(55, Short.MAX_VALUE)))
         );
 
         pack();
@@ -363,6 +491,64 @@ public class index extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_diagonalMaiorActionPerformed
 
+    private void NomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NomeActionPerformed
+
+    private void LoginBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginBTActionPerformed
+        
+    }//GEN-LAST:event_LoginBTActionPerformed
+
+    private void LoginBTMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginBTMouseClicked
+        String F = Funcao.getSelectedItem().toString();
+       switch (F){
+           case "Aluno":{
+                Aluno A = new Aluno();
+                A.setNome(Nome.getText());
+                if ("".equals(Nome.getText())){
+                    JOptionPane.showMessageDialog(null, "Nome Invalido");
+                }else{
+                    A.setCodigoDeAcesso(Double.parseDouble(JOptionPane.showInputDialog("Insira O Codigo")));
+                    Double CodAcessoP = A.getCodigoDeAcesso();
+                if (CodAcessoP == 0000){
+                    JOptionPane.showMessageDialog(null, A.Acesso(A.getNome()));
+                    GerenciadorAcesso.setVisible(false);
+                    nomeEscolhaFigura.setVisible(true);
+                    figura.setVisible(true);
+                    OK.setVisible(true);
+                    Figuras.setVisible(true);
+                }else{
+                    JOptionPane.showMessageDialog(null, "Codigo Invalido");
+            } 
+                }
+                
+                break;
+           }
+           case "Professor":{
+               Professor P = new Professor();
+                P.setNome(Nome.getText());
+                if ("".equals(Nome.getText())){
+                    JOptionPane.showMessageDialog(null, "Nome Invalido");
+                }else{
+                    P.setCodigoDeAcesso(Double.parseDouble(JOptionPane.showInputDialog("Insira O Codigo")));
+                    Double CodAcessoP = P.getCodigoDeAcesso();
+                if (CodAcessoP == 1111){
+                    JOptionPane.showMessageDialog(null, P.Acesso(P.getNome()));
+                    GerenciadorAcesso.setVisible(false);
+                    nomeEscolhaFigura.setVisible(true);
+                    figura.setVisible(true);
+                    OK.setVisible(true);
+                    Figuras.setVisible(true);
+                }else{
+                    JOptionPane.showMessageDialog(null, "Codigo Invalido");
+            } 
+                }
+                
+                break;
+           }
+       }
+    }//GEN-LAST:event_LoginBTMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -399,6 +585,12 @@ public class index extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Figuras;
+    private javax.swing.JComboBox<String> Funcao;
+    private javax.swing.JLayeredPane GerenciadorAcesso;
+    private javax.swing.JPanel Login;
+    private javax.swing.JButton LoginBT;
+    private javax.swing.JTextField Nome;
     private javax.swing.JButton OK;
     private javax.swing.JTextField altura;
     private javax.swing.JTextField base;
@@ -408,13 +600,16 @@ public class index extends javax.swing.JFrame {
     private javax.swing.JTextField diagonalMenor;
     private javax.swing.JComboBox<String> figura;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel nomeAltura;
     private javax.swing.JLabel nomeBase;
     private javax.swing.JLabel nomeBaseMenor;
     private javax.swing.JLabel nomeDiagonalMaior;
     private javax.swing.JLabel nomeDiagonalMenor;
+    private javax.swing.JLabel nomeEscolhaFigura;
+    private javax.swing.JLabel nomeFuncao;
+    private javax.swing.JLabel nomeNome;
     // End of variables declaration//GEN-END:variables
+
+    
 }
